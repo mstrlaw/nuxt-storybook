@@ -1,6 +1,11 @@
 <template>
   <div>
-    <b class="text-lg">{{ name }} - "{{ username }}"</b>
+    <nuxt-link
+      :to="{ name:'user' }"
+      class="text-lg font-bold"
+    >
+      {{ name }} - "{{ username }}"
+    </nuxt-link>
     <div class="flex flex-wrap justify-start my-2">
       <div class="w-1/2 mb-2">
         <span class="text-grey-dark font-bold">Email</span>

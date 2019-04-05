@@ -1,9 +1,17 @@
 import Vue from 'vue'
 import { storiesOf } from '@storybook/vue'
-import List from './List'
+import List from '@/components/list/List'
+import store from '@/.storybook/store'
 
-storiesOf('List', module)
-  .add('As a component', () => ({
+
+storiesOf('Lists', module)
+  .add('Users', () => ({
     components: { List },
+    store: store,
     template: '<List />'
+  }))
+  .add('Comments', () => ({
+    components: { List },
+    store: store,
+    template: `<List :source="'comments'" />`
   }))

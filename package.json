@@ -19,6 +19,7 @@
     "nuxt": "^2.5.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.0.6",
     "@storybook/vue": "^5.0.6",
     "autoprefixer": "^8.6.4",
     "babel-eslint": "^8.2.1",

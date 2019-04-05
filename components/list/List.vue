@@ -44,7 +44,11 @@
       loadUsers() {
         this.$store.dispatch('GET_USERS')
         .then(res => {
-          this.entities = res
+          if ('data' in res) {
+            this.entities = res.data
+          } else {
+            this.entities = res
+          }
         })
         .catch(err => {
           console.log('API error')
@@ -54,7 +58,11 @@
       loadComments() {
         this.$store.dispatch('GET_COMMENTS')
         .then(res => {
-          this.entities = res
+          if ('data' in res) {
+            this.entities = res.data
+          } else {
+            this.entities = res
+          }
         })
         .catch(err => {
           console.log('API error')
