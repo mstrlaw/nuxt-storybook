@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "storybook": "start-storybook -p 6060"
+    "storybook": "start-storybook -p 6060",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
