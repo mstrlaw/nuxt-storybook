@@ -1,22 +1,21 @@
 # nuxt-storybook
+![Header Image](https://cdn-images-1.medium.com/max/2400/1*8vntpfJ8_FQ1XkeMVggasQ.png)
 
-> Example of using Nuxt + Storybook
+> Reference repository on using Storybook 5.0.6 and Nuxt.js 2.5.1
 
-## Build Setup
+Full article explaining each step can be found on [Medium](https://medium.com/@mstrlaw/a-guide-on-using-storybook-with-nuxt-js-1e0018ec51c9).
+
+#### Running Storybook
+
+After cloning the repo, `cd` into the folder and:
 
 ``` bash
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+$ npm run storybook
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Storybook will open up a new tab on `http://localhost:6060/` (change the package.json script to use the default port).
+
+Feedback is appreciated.
