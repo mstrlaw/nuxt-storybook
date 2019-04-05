@@ -16,6 +16,14 @@ html
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
+body {
+  box-shadow: inset 0px 3px 0px rgba(0,0,0,.8),
+              inset -3px 0px 0px rgba(0,0,0,.8),
+              inset 0px -3px 0px rgba(0,0,0,.8),
+              inset 3px 0px 0px rgba(0,0,0,.8);
+}
+
 *, *:before, *:after
 {
   box-sizing: border-box;

@@ -1,6 +1,11 @@
 <template>
-  <div class="list w-full rounded p-1 mx-3">
-    <ListItem :item-type="source"/>
+  <div class="list w-full rounded p-2 mx-3">
+    <ListItem
+      v-for="entity in entities"
+      :key="entity.id"
+      :item-type="source"
+      :data="entity"
+    />
   </div>
 </template>
 
@@ -31,7 +36,7 @@
           break
 
         case 'comments':
-          this.loadUsers()
+          this.loadComments()
           break
       }
     },
@@ -39,7 +44,7 @@
       loadUsers() {
         this.$store.dispatch('GET_USERS')
         .then(res => {
-          console.log(res)
+          this.entities = res
         })
         .catch(err => {
           console.log('API error')
@@ -49,7 +54,7 @@
       loadComments() {
         this.$store.dispatch('GET_COMMENTS')
         .then(res => {
-          console.log(res)
+          this.entities = res
         })
         .catch(err => {
           console.log('API error')
@@ -65,5 +70,7 @@
 
   .list {
     background: $background;
+    max-height: 550px;
+    overflow: auto;
   }
 </style>

@@ -8,7 +8,7 @@
         Example of using Nuxt + Storybook
       </h2>
     </div>
-    <div class="flex justify-between w-1/2">
+    <div class="flex justify-between w-full">
       <List />
       <List :source="'comments'"/>
     </div>

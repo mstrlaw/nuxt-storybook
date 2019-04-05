@@ -1,17 +1,34 @@
 <template>
-  <div class="list-item rounded bg-blue-light px-5 py-3">
+  <div class="list-item rounded bg-indigo-lightest shadow px-5 py-3 mb-3">
     <div v-if="itemType === 'users'">
-      A user item
+      <User
+        :name="data.name"
+        :username="data.username"
+        :email="data.email"
+        :phone="data.phone"
+        :address="data.address"
+        :company="data.company"
+      />
     </div>
     <div v-else>
-      A comment item
+      <Comment
+        :name="data.name"
+        :body="data.body"
+      />
     </div>
   </div>
 </template>
 
 <script>
+  import User from '@/components/list/items/User'
+  import Comment from '@/components/list/items/Comment'
+
   export default {
     name: 'ListItem',
+    components: {
+      User,
+      Comment
+    },
     props: {
       itemType: {
         type: String,
