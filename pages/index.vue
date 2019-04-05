@@ -1,13 +1,16 @@
 <template>
   <section class="container">
-    <div>
+    <div class="text-center">
       <h1 class="title">
         nuxt-storybook
       </h1>
       <h2 class="subtitle">
         Example of using Nuxt + Storybook
       </h2>
+    </div>
+    <div class="flex justify-between w-1/2">
       <List />
+      <List :source="'comments'"/>
     </div>
   </section>
 </template>
@@ -27,9 +30,10 @@ export default {
 {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 .title
 {

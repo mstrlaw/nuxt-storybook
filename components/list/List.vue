@@ -1,12 +1,17 @@
 <template>
-  <div class="list p-5 rounded">
-    I'm a {{ source }} list
+  <div class="list w-full rounded p-1 mx-3">
+    <ListItem :item-type="source"/>
   </div>
 </template>
 
 <script>
+  import ListItem from '@/components/list/items/ListItem'
+
   export default {
     name: 'List',
+    components: {
+      ListItem
+    },
     props: {
       source: {
         type: String,
@@ -32,12 +37,24 @@
     },
     methods: {
       loadUsers() {
-        //  Will call store action
-        console.log('load users')
+        this.$store.dispatch('GET_USERS')
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => {
+          console.log('API error')
+          console.log(err)
+        })
       },
       loadComments() {
-        //  Will call store action
-        console.log('load comments')
+        this.$store.dispatch('GET_COMMENTS')
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => {
+          console.log('API error')
+          console.log(err)
+        })
       },
     }
   }
