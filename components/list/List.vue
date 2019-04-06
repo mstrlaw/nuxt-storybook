@@ -1,4 +1,4 @@
-<template>
+§<template>
   <div class="list w-full rounded p-2 mx-3">
     <ListItem
       v-for="entity in entities"
@@ -44,11 +44,7 @@
       loadUsers() {
         this.$store.dispatch('GET_USERS')
         .then(res => {
-          if ('data' in res) {
-            this.entities = res.data
-          } else {
-            this.entities = res
-          }
+          this.entities = res.data
         })
         .catch(err => {
           console.log('API error')
@@ -58,11 +54,7 @@
       loadComments() {
         this.$store.dispatch('GET_COMMENTS')
         .then(res => {
-          if ('data' in res) {
-            this.entities = res.data
-          } else {
-            this.entities = res
-          }
+          this.entities = res.data
         })
         .catch(err => {
           console.log('API error')
