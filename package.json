@@ -17,11 +17,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/dotenv": "^1.4.1",
-    "nuxt": "^2.9.2"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",
-    "@storybook/vue": "^5.2.1",
+    "@storybook/vue": "^6.5.13",
     "autoprefixer": "^8.6.4",
     "babel-eslint": "^8.2.1",
     "babel-preset-vue": "^2.0.2",
